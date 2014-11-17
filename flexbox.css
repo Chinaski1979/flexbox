@@ -1,0 +1,38 @@
+
+.nav, .main {
+  display: -webkit-flex; /*this is just for the parent container*/
+}
+
+.nav {
+  -webkit-flex-direction: row; /*column, row-reverse etc*/
+  -webkit-justify-content: space-between; /*flex-end, center...*/
+  -webkit-flex-wrap: wrap; /*this is for items to adjust*/
+}
+
+/*.nav li:first-child {
+  margin-right: auto;
+}*/
+
+
+.nav li {
+ -webkit-flex-grow: 1; /*how much a flex item will grow*/
+}/*1 represents the ration of free space that will be taken by li*/
+
+.col {
+  -webkit-flex: 1;
+  -webkit-flex-wrap: wrap;
+}
+
+.col-c {
+  -webkit-flex: 2; /*column c grows and remaining space its evenly distributed for the other 2 columns*/
+  -webkit-order: -1; /*this changes order of columns*/
+}
+
+
+
+
+@media screen and (max-width: 999px) {
+  .main {
+    -webkit-flex-direction: column;
+  }
+}
